@@ -48,11 +48,11 @@ class RecordController extends Controller
                 if ($response->successful()) {
                     $transcription = $d['text']; 
                     $thumbnail = Media::storeThumbnail($request);
-                    $thumbnail_url = $thumbnail != null ? 'https://only1goodnews.onrender.com' . '/storage/thumbnails/' . $thumbnail : null;
+                    $thumbnail_url = $thumbnail != null ? 'hngx-stage-five.onrender.com' . '/storage/thumbnails/' . $thumbnail : null;
     
                     $record = Record::create([
                         'name' => $data['filename'],
-                        'url' => 'https://only1goodnews.onrender.com' . '/storage/records/' . $data['filename'],
+                        'url' => 'hngx-stage-five.onrender.com' . '/storage/records/' . $data['filename'],
                         'size' => $data['size'],
                         'extension' => $data['extension'],
                         'duration' => $data['duration'],
@@ -76,9 +76,8 @@ class RecordController extends Controller
                 throw new \Exception('No video file provided.');
             }
         } catch (\Exception $e) {
-            // Handle exceptions here
             DB::rollback();
-            return response()->json(['message' => $e->getMessage()], 500); // Internal Server Error
+            return response()->json(['message' => $e->getMessage()], 500); 
         }
     }
 
