@@ -59,11 +59,6 @@ Before you start, make sure you have the following prerequisites installed on yo
     ```
     Laravel Chrome Extension API is now up and running on {127.0.0.1:8000} which is the base url!
 
-### API Endpoints
-
-### Request and Response Formats
-The API uses JSON for both requests and responses. The following table describes the JSON format for the requests and responses:
-
 ### Sample Usage
 
 ## Uploading a new video (201 Created)
