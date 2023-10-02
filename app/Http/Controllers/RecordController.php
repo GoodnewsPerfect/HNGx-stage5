@@ -48,11 +48,11 @@ class RecordController extends Controller
                 if ($response->successful()) {
                     $transcription = $d['text']; 
                     $thumbnail = Media::storeThumbnail($request);
-                    $thumbnail_url = $thumbnail != null ? 'https://hngx-stage-five.onrender.com' . '/storage/thumbnails/' . $thumbnail : null;
+                    $thumbnail_url = $thumbnail != null ? 'https://only1goodnews.onrender.com' . '/storage/thumbnails/' . $thumbnail : null;
     
                     $record = Record::create([
                         'name' => $data['filename'],
-                        'url' => 'https://hngx-stage-five.onrender.com' . '/storage/records/' . $data['filename'],
+                        'url' => 'https://only1goodnews.onrender.com' . '/storage/records/' . $data['filename'],
                         'size' => $data['size'],
                         'extension' => $data['extension'],
                         'duration' => $data['duration'],
@@ -120,7 +120,7 @@ class RecordController extends Controller
         try {
             $record = Record::where('name', $request->name)->first();
             if (!$record) {
-                return response()->json(['message' => 'record not found.'], 404);
+                return response()->json(['message' => 'no content.'], 204);
             }
             DB::beginTransaction();
            $deteled = $record->delete();

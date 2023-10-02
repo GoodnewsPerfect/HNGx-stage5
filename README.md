@@ -1,6 +1,6 @@
-# HNGx CHROME EXTENSION API Documentation
+# HNGx Chrome Extension API
 
-Welcome to the CHROME EXTENSION API documentation Laravel application. This API allows you to upload, and Read Video.
+Welcome to the Chrome Extension API documentation Laravel application. This API allows you to upload a video and get url to the video and also the transcription of the video, Delete a video record and also get all video records.
 
 ## Table of Contents
 
@@ -8,7 +8,6 @@ Welcome to the CHROME EXTENSION API documentation Laravel application. This API 
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [API Endpoints](#api-endpoints)
-- [Request and Response Formats](#request-and-response-formats)
 - [Sample Usage](#sample-usage)
 
 ## Getting Started
@@ -27,8 +26,8 @@ Before you start, make sure you have the following prerequisites installed on yo
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/emekaenyinnia/HNGx-stage-five.git
-   cd HNGx-stage-five
+   git clone https://github.com/GoodnewsPerfect/HNGx-stage5
+   cd HNGx-stage5 
    ```
 
 2. Install PHP dependencies using Composer:
@@ -58,57 +57,22 @@ Before you start, make sure you have the following prerequisites installed on yo
     php artisan serve
 
     ```
-    Laravel API is now up and running on {127.0.0.1:8000} which is the base url!
+    Laravel Chrome Extension API is now up and running on {127.0.0.1:8000} which is the base url!
 
 ### API Endpoints
 
 ### Request and Response Formats
 The API uses JSON for both requests and responses. The following table describes the JSON format for the requests and responses:
 
-<table>
-    <thead>
-        <th> Requests </th>
-        <th> Response </th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>POST /api</td>
-            <td>201 Create with the newly uploaded screen record in the response body</td>
-        </tr>
-        <tr>
-            <td>GET /api/{name}</td>
-            <td>200 OK retuns the record with the specified name in the response body.</td>
-        </tr>
-           <tr>
-            <td>GET /api</td>
-            <td>200 OK with an array of records in the response body.</td>
-        </tr>
-            <tr>
-            <td>DELETE /api/{id}</td>
-            <td>204 No Content</td>
-        </tr>
-    </tbody>
-</table>
-
 ### Sample Usage
 
-4. Api URL:
-    ```bash
-    https://hngx-stage-five.onrender.com
-    ``` 
-## Adding a screen record  (201 Created)
+## Uploading a new video (201 Created)
 
-<img src="documentation/images/create.png" alt="Create new record" />
+<img src="documentation/postVideo.png" alt="Upload a new video
+## Fetch all video records (200 OK)
 
-## Fetch a screen record (200 OK)
+<img src="documentation/get all.png" alt="Fetch all record" />
 
-<img src="documentation/images/get.png" alt="fetch a record" />
+## Remove a video record (204 No Content)
 
-## Remove a record (204 No Content)
-
-<img src="documentation/images/delete.png" alt="remove a record" />
-
-## Fetch record (200 OK)
-
-<img src="documentation/images/viewAll.png" alt="fetch all records" />
-
+<img src="documentation/deleteRecord.png" alt="remove a user" />
