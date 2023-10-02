@@ -119,7 +119,7 @@ class RecordController extends Controller
         try {
             $record = Record::where('name', $request->name)->first();
             if (!$record) {
-                return response()->json(['message' => 'no content.'], 204);
+                return response()->json(['message' => 'record not found.'], 404);
             }
             DB::beginTransaction();
            $deteled = $record->delete();
@@ -128,8 +128,8 @@ class RecordController extends Controller
            }
             DB::commit();
             return response()->json([
-                'message' => "record delete successfully.",
-            ], 202);
+                'message' => "record deleted successfully.",
+            ], 204);
           
         } catch (\Throwable $th) {
             return response()->json(['message' => $th->getMessage(),], 503);
