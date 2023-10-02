@@ -63,11 +63,11 @@ Before you start, make sure you have the following prerequisites installed on yo
 
 ## Uploading a new video (201 Created)
 
-<img src="documentation/postVideo.png" alt="Upload a new video
+<img src="documentation/images/postVideo.png" alt="Upload a new video
 ## Fetch all video records (200 OK)
 
-<img src="documentation/get all.png" alt="Fetch all record" />
+<img src="documentation/images/getAll.png" alt="Fetch all record" />
 
 ## Remove a video record (204 No Content)
 
-<img src="documentation/deleteRecord.png" alt="remove a user" />
+<img src="documentation/images/deleteRecord.png" alt="remove a user" />
